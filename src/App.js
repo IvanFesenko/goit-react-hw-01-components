@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-function App() {
+function App(props) {
   return (
     <div className="container">
       <h1 className="main-title">Homework 1</h1>

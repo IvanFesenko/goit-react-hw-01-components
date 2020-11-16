@@ -1,19 +1,19 @@
 import React from "react";
 
-function Stats(props) {
+function Stats({ followers, views, likes }) {
   return (
-    <ul class="stats">
+    <ul className="stats">
       <li>
-        <span class="label">Followers</span>
-        <span class="quantity">1000</span>
+        <span className="label">Followers</span>
+        <span className="quantity">{followers}</span>
       </li>
       <li>
-        <span class="label">Views</span>
-        <span class="quantity">2000</span>
+        <span className="label">Views</span>
+        <span className="quantity">{views}</span>
       </li>
       <li>
-        <span class="label">Likes</span>
-        <span class="quantity">3000</span>
+        <span className="label">Likes</span>
+        <span className="quantity">{likes}</span>
       </li>
     </ul>
   );
