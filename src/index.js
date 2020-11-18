@@ -3,4 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+import profile from './components/profile/user.json';
+
+const props = { profile };
+
+
+
+ReactDOM.render(<App props={props}/>, document.getElementById("root"));

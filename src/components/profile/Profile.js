@@ -1,7 +1,7 @@
 import React from "react";
 import Stats from "./Stats";
 
-function Profile(props) {
+function Profile(profile) {
   return (
     <div class="profile">
       <div class="description">
@@ -15,7 +15,7 @@ function Profile(props) {
         <p class="location">Salvador, Brasil</p>
       </div>
 
-      <Stats stats={props.stats} />
+      <Stats stats={profile.stats} />
     </div>
   );
 }
