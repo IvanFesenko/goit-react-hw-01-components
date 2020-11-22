@@ -4,9 +4,11 @@ import "./index.css";
 import App from "./App";
 
 
-import profile from './components/profile/user.json';
+import userProfile from './components/profile/user.json';
+import statisticalData from './components/statistics/statistical-data.json';
 
-const props = { profile };
+
+const props = { userProfile, statisticalData };
 
 
 

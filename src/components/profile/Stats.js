@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-function Stats({ followers, views, likes }) {
+function Stats({stats}) {
+  const { followers, views, likes } = stats
   return (
     <ul className="stats">
       <li>
@@ -17,6 +19,12 @@ function Stats({ followers, views, likes }) {
       </li>
     </ul>
   );
+}
+
+Stats.protoTypes = {
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 }
 
 export default Stats;

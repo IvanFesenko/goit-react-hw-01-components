@@ -1,23 +1,39 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
 import Stats from "./Stats";
 
 function Profile(profile) {
+  const {name, tag, location, avatar, stats} = profile;
   return (
-    <div class="profile">
-      <div class="description">
+    <div className="profile">
+      <div className="description">
         <img
-          src="https://i.pinimg.com/originals/a0/40/66/a04066a2d1fcf25df39c599e093995c8.jpg"
-          alt="user avatar"
-          class="avatar"
+          src={avatar}
+          alt={name}
+          className="avatar"
         />
-        <p class="name">Petra Marica</p>
-        <p class="tag">@pmarica</p>
-        <p class="location">Salvador, Brasil</p>
+        <p className="name">{name}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
-
-      <Stats stats={profile.stats} />
+      <Stats stats={stats} />
     </div>
   );
 }
+
+
+Profile.defaultProps = {
+  avatar:
+      'https://i.pinimg.com/originals/a0/40/66/a04066a2d1fcf25df39c599e093995c8.jpg',
+  location: 'not show',
+};
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.number.isRequired,
+  location: PropTypes.string,
+};
 
 export default Profile;
