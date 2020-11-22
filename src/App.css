@@ -4,14 +4,19 @@
   padding: 0 15px;
 }
 
-.avatar{
+.avatar {
   width: 200px;
 }
 
-.quantity{
+.quantity {
   display: block;
 }
 
-.label{
+.label {
   display: block;
+}
+
+.stats,
+.stat-list {
+  list-style: none;
 }
