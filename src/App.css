@@ -4,7 +4,7 @@
   padding: 0 15px;
 }
 
-.avatar {
+.profile .avatar {
   width: 200px;
 }
 
@@ -17,6 +17,22 @@
 }
 
 .stats,
-.stat-list {
+.stat-list,
+.friend-list {
   list-style: none;
+}
+
+.status {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+}
+
+.is-online {
+  background-color: green;
+}
+
+.is-offline {
+  background-color: red;
 }

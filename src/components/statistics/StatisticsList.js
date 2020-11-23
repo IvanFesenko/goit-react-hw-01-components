@@ -8,6 +8,7 @@ function StatisticsList({ stats }) {
     const number = random(0, 43);
     return (
       <ListItem
+        key={item.id}
         label={item.label}
         percentage={`${item.percentage}%`}
         color={colors[number]}
