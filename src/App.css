@@ -4,16 +4,8 @@
   padding: 0 15px;
 }
 
-.profile .avatar {
-  width: 200px;
-}
-
-.quantity {
-  display: block;
-}
-
-.label {
-  display: block;
+.main-title {
+  text-align: center;
 }
 
 .stats,

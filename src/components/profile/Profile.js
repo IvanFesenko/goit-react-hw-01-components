@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import Stats from './Stats';
+import styles from './Profile.module.css';
 
 function Profile(profile) {
   const { name, tag, location, avatar, stats } = profile;
   return (
-    <div className="profile">
+    <div className={styles.profile}>
       <div className="description">
-        <img src={avatar} alt={name} className="avatar" />
-        <p className="name">{name}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+        <img src={avatar} alt={name} className={styles.avatar} />
+        <p className={styles.name}>{name}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
       </div>
       <Stats stats={stats} />
     </div>
