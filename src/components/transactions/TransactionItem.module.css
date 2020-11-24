@@ -1,0 +1,3 @@
+.capitalLetter:first-letter {
+  text-transform: uppercase;
+}

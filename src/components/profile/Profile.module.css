@@ -1,0 +1,30 @@
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.profile {
+  max-width: 300px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px 0 0 0;
+  border-radius: 5px;
+}
+
+.description {
+  text-align: center;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.tag {
+  color: darkgray;
+}
+.location {
+  color: darkgray;
+}

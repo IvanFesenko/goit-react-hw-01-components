@@ -1,0 +1,9 @@
+.stat_list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+  background: #fff;
+  margin: 0;
+}
