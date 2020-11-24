@@ -1,22 +1,9 @@
-import React from 'react';
-
 import TransactionsItem from './TransactionItem';
+import styles from './TransactionHistory.module.css';
 
 function TransactionHistory({ items }) {
-  const transactions = items.map(item => {
-    const { id, type, amount, currency } = item;
-    return (
-      <TransactionsItem
-        key={id}
-        type={type}
-        amount={amount}
-        currency={currency}
-      />
-    );
-  });
-
   return (
-    <table className="transaction-history">
+    <table className={styles.transaction_history}>
       <thead>
         <tr>
           <th>Type</th>
@@ -24,8 +11,19 @@ function TransactionHistory({ items }) {
           <th>Currency</th>
         </tr>
       </thead>
-
-      <tbody>{transactions}</tbody>
+      <tbody>
+        {items.map(item => {
+          const { id, type, amount, currency } = item;
+          return (
+            <TransactionsItem
+              key={id}
+              type={type}
+              amount={amount}
+              currency={currency}
+            />
+          );
+        })}
+      </tbody>
     </table>
   );
 }

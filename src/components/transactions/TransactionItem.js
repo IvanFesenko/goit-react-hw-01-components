@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import styles from './TransactionItem.module.css';
 
 function TransactionsItem({ type, amount, currency }) {
   return (
     <tr>
-      <td>{type}</td>
+      <td className={styles.capitalLetter}>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
     </tr>
