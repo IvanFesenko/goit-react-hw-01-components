@@ -1,10 +1,10 @@
-import React from 'react';
+import styles from './ListItem.module.css';
 
 function ListItem({ label, percentage, color }) {
   return (
-    <li className="item" style={{ backgroundColor: `${color}` }}>
-      <span className="label">{label}</span>
-      <span className="percentage">{percentage}</span>
+    <li className={styles.item} style={{ backgroundColor: `${color}` }}>
+      <span className={styles.label}>{label}</span>
+      <span className={styles.percentage}>{percentage}</span>
     </li>
   );
 }

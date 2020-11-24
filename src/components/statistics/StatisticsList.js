@@ -1,22 +1,22 @@
-import React from 'react';
 import ListItem from './ListItem';
-import colors from '../../services/colors';
-import random from '../../services/randomNumber';
+import randomColor from '../../services/randomHexColor';
+import styles from './StatisticsList.module.css';
 
 function StatisticsList({ stats }) {
-  const listItems = stats.map(item => {
-    const number = random(0, 43);
-    return (
-      <ListItem
-        key={item.id}
-        label={item.label}
-        percentage={`${item.percentage}%`}
-        color={colors[number]}
-      />
-    );
-  });
-
-  return <ul className="stat-list">{listItems}</ul>;
+  return (
+    <ul className={styles.stat_list}>
+      {stats.map(item => {
+        return (
+          <ListItem
+            key={item.id}
+            label={item.label}
+            percentage={`${item.percentage}%`}
+            color={randomColor()}
+          />
+        );
+      })}
+    </ul>
+  );
 }
 
 export default StatisticsList;
